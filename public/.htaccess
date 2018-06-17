@@ -17,4 +17,10 @@
     # Handle Authorization Header
     RewriteCond %{HTTP:Authorization} .
     RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+
+    AuthUserFile /home/haru708/.htpasswd
+    AuthGroupFile /dev/null
+    AuthName "いつものやつ"
+    AuthType Basic
+    require valid-user
 </IfModule>
